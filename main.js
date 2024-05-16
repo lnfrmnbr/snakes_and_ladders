@@ -5,11 +5,9 @@ ls_zmei2 = [0,0,0];
 ls_lestn1 = [0,0,0];
 ls_lestn2 = [0,0,0];
 var priority = 1
-var generated = false;
 
 function one_move(pers, cube_res, preor){
   if (pers+cube_res >= 100){
-    generated = false;
     if (preor == 1){
          document.getElementById("i100_1").src = "pers1.png";
          document.getElementById("text").innerHTML = "Победа 1!!";
@@ -159,7 +157,6 @@ function generate() {
             ls_zmei1[2] = randomIndexes[10];
             ls_zmei2[2] = randomIndexes[11];
         }
-        generated = true;
         document.getElementById("cube1_butt").hidden = false;
         document.getElementById("generate_butt").hidden = true;
 }
